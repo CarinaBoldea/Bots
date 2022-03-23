@@ -34,22 +34,16 @@ def click(x, y):
 
 
 # press q to stop the bot
-def click_tiels(numberOfPlays):
+def click_tiels():
     while keyboard.is_pressed('q') == False:
-        if numberOfPlays == 20:
-            pyautogui.press('q')
         if pyautogui.pixel(355, 505)[0] == 0:
             click(355, 505)
-            numberOfPlays += 1
         if pyautogui.pixel(448, 505)[0] == 0:
             click(448, 505)
-            numberOfPlays += 1
         if pyautogui.pixel(541, 505)[0] == 0:
             click(541, 505)
-            numberOfPlays += 1
         if pyautogui.pixel(631, 505)[0] == 0:
             click(631, 505)
-            numberOfPlays += 1
 
 
 pyautogui.click(96, 52)#reload page
@@ -58,6 +52,6 @@ pyautogui.click(491, 442)#play start
 time.sleep(1)
 pyautogui.click(493, 454)#play game button
 time.sleep(1)
-click_tiels(20)
+click_tiels()
 
 # get_poz()
